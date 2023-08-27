@@ -26,19 +26,33 @@ class Shape {
     return "This is a Shape";
   }
 }
+// 4. Method Chaining
 class Rectangle extends Shape {
   width: number;
   height: number;
+  factor: number;
   constructor(width: number, height: number) {
     super();
     this.width = width;
     this.height = height;
+    this.factor = factor;
   }
   area(): number {
     return this.width * this.height;
   }
   info(): string {
     return "This is a Rectangle";
+  }
+
+  scale(factor: number): void {
+    this.width = this.width * factor;
+    this.height = this.height * factor;
+  }
+  static newRectangle(rectangle1: Rectangle, rectangle2: Rectangle): Rectangle {
+    return new Rectangle(
+      rectangle1.width + rectangle2.width,
+      rectangle1.height + rectangle2.height
+    );
   }
 }
 class ColoredRectangle extends Rectangle {
@@ -51,8 +65,6 @@ class ColoredRectangle extends Rectangle {
     return `This is a ${this.color}`;
   }
 }
-
-// 4. Method Chaining
 
 // 5. Shape with draw method
 
