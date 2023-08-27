@@ -44,9 +44,10 @@
 //     return "This is a Rectangle";
 //   }
 
-//   scale(factor: number): void {
+//   scale(factor: number): Rectangle {
 //     this.width = this.width * factor;
 //     this.height = this.height * factor;
+// return this
 //   }
 //   static newRectangle(rectangle1: Rectangle, rectangle2: Rectangle): Rectangle {
 //     return new Rectangle(
