@@ -13,6 +13,13 @@ class Rectangle {
   }
 }
 
+//  2. Square - ריבוע
+class Square extends Rectangle {
+  constructor(rib: number) {
+    super(rib, rib);
+  }
+}
+
 // 4. Method Chaining
 
 // 5. Shape with draw method
