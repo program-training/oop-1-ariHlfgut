@@ -1,22 +1,54 @@
 // את הקוד שלכם תכתבו כאן
 
 //  1. Rectangle - מלבן
-class Rectangle {
+// class Rectangle {
+//   width: number;
+//   height: number;
+//   constructor(width: number, height: number) {
+//     this.width = width;
+//     this.height = height;
+//   }
+//   area(): number {
+//     return this.width * this.height;
+//   }
+
+// }
+
+//  2. Square - ריבוע
+// class Square extends Rectangle {
+//   constructor(rib: number) {
+//     super(rib, rib);
+//   }
+// }
+// 3. Shape - צורה
+class Shape {
+  info(): string {
+    return "This is a Shape";
+  }
+}
+class Rectangle extends Shape {
   width: number;
   height: number;
   constructor(width: number, height: number) {
+    super();
     this.width = width;
     this.height = height;
   }
   area(): number {
     return this.width * this.height;
   }
+  info(): string {
+    return "This is a Rectangle";
+  }
 }
-
-//  2. Square - ריבוע
-class Square extends Rectangle {
-  constructor(rib: number) {
-    super(rib, rib);
+class ColoredRectangle extends Rectangle {
+  color: string;
+  constructor(width: number, height: number, color: string) {
+    super(width, height);
+    this.color = color;
+  }
+  info(): string {
+    return `This is a ${this.color}`;
   }
 }
 
